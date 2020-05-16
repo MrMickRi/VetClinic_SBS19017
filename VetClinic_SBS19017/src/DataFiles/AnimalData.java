@@ -119,7 +119,10 @@ public class AnimalData {
 				//For loop goes through size of array incrementing by 1 every loop. 
 				//for each loop it prints out the object at current index (i). 
 				for (int i =0 ; i < animalList.size();i++) {
-					System.out.println(animalList.get(i));	
+					System.out.println("Name : " + animalList.get(i).getName()
+							+ "\r\nAge : "+ animalList.get(i).getAge()
+							+ "\r\nType of animal : " + animalList.get(i).getType()
+							+ "\r\nMedical Condition : "+ animalList.get(i).getCondition()+"\r\n");
 					}
 			}
 			//ShowAnimalsByType takes in a user input, Stores theinput as a String. 
@@ -135,7 +138,10 @@ public class AnimalData {
 					String tempType = animalList.get(i).getType();
 					boolean typeSearch = tempSearch.equals(tempType);
 					if(typeSearch != false){
-						System.out.println(animalList.get(i));
+						System.out.println("Name : " + animalList.get(i).getName()
+								+ "\r\nAge : "+ animalList.get(i).getAge()
+								+ "\r\nType of animal : " + animalList.get(i).getType()
+								+ "\r\nMedical Condition : "+ animalList.get(i).getCondition()+"\r\n");
 					}
 				}
 			}
@@ -153,7 +159,11 @@ public class AnimalData {
 					String tempName = animalList.get(i).getName();
 					boolean nameSearch = tempSearch.equals(tempName);
 					if(nameSearch != false){
-						System.out.println(animalList.get(i));
+						//Raw data Dump ---> //System.out.println(animalList.get(i));
+						System.out.println("Name : " + animalList.get(i).getName()
+								+ "\r\nAge : "+ animalList.get(i).getAge()
+								+ "\r\nType of animal : " + animalList.get(i).getType()
+								+ "\r\nMedical Condition : "+ animalList.get(i).getCondition()+"\r\n");
 					}
 				}
 			}
