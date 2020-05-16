@@ -8,6 +8,8 @@ import Objects.MedicalStaff;
 
 public class StaffData {
 //Staff data class to generates all staff titles and names. 
+	
+	//Creation of arraylists to hold all data. 
 	public ArrayList <AdminStaff> adminStaffList;
 	public ArrayList <MedicalStaff> medStaffList;
 	public ArrayList<String> adminTitlesList;
@@ -149,10 +151,18 @@ public class StaffData {
 		//ShowAllStaff method prints all objects within staff med list and admin staff list. 
 		public void showAllStaff() {
 			for (int i =0 ; i < medStaffList.size();i++) {
-				System.out.println(medStaffList.get(i));	
+				//Raw Data Dump --->  //System.out.println(medStaffList.get(i));	
+				System.out.println("Name : " +medStaffList.get(i).getName()
+						+ "\r\nStaff ID : " +medStaffList.get(i).getStaffID()
+						+ "\r\nSalary Level : "+medStaffList.get(i).getSalaryLevel()
+						+ "\r\nJob Title : "+medStaffList.get(i).getMedicalTitle()+"\r\n");
 				}
 			for (int i =0 ; i < adminStaffList.size();i++) {
-			System.out.println(adminStaffList.get(i));	
+				//Raw Data Dump ---> //System.out.println(adminStaffList.get(i));
+				System.out.println("Name : " +adminStaffList.get(i).getName()
+					+ "\r\nStaff ID : " +adminStaffList.get(i).getStaffID()
+					+ "\r\nSalary Level : "+adminStaffList.get(i).getSalaryLevel()
+					+ "\r\nJob Title : "+adminStaffList.get(i).getAdminTitle()+"\r\n");
 			}
 		}
 		//ShowStaffTitle allows the user to select a job title and this will print all staff members with said job title. 
@@ -212,7 +222,7 @@ public class StaffData {
 		//AdminStaffTasks prints out a list of admins and their current tasks. 
 		public void adminStaffTasks() {
 			for (int i =0 ; i < adminStaffList.size();i++) {
-				System.out.println(adminStaffList.get(i).getName() + " is Currently doing "+adminStaffList.get(i).getAdminTask());	
+				System.out.println(adminStaffList.get(i).getName() + " is Currently "+adminStaffList.get(i).getAdminTask());	
 				}
 		}
 		//checkadminList method passes through a jobTitle from ShowStaffTitle
@@ -222,7 +232,11 @@ public class StaffData {
 			for(int i = 0;i < adminStaffList.size();i++) {
 				String tempTitle = adminStaffList.get(i).getAdminTitle();
 				if(tempTitle == jobTitle) {
-					System.out.println(adminStaffList.get(i));
+				//Raw Data Dump ---> //System.out.println(adminStaffList.get(i));
+					System.out.println("Name : " +adminStaffList.get(i).getName()
+							+ "\r\nStaff ID : " +adminStaffList.get(i).getStaffID()
+							+ "\r\nSalary Level : "+adminStaffList.get(i).getSalaryLevel()
+							+ "\r\nJob Title : "+adminStaffList.get(i).getAdminTitle()+"\r\n");
 				}
 			}		
 		}
@@ -234,7 +248,11 @@ public class StaffData {
 			for(int i = 0;i < medStaffList.size();i++) {
 				String tempTitle = medStaffList.get(i).getMedicalTitle();
 				if(tempTitle == jobTitle) {
-					System.out.println(medStaffList.get(i));
+				//Raw Data Dump ---> //System.out.println(medStaffList.get(i));
+					System.out.println("Name : " +medStaffList.get(i).getName()
+							+ "\r\nStaff ID : " +medStaffList.get(i).getStaffID()
+							+ "\r\nSalary Level : "+medStaffList.get(i).getSalaryLevel()
+							+ "\r\nJob Title : "+medStaffList.get(i).getMedicalTitle()+"\r\n");
 				}
 			}		
 		}

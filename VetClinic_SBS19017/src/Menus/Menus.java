@@ -4,7 +4,8 @@ import DataFiles.AnimalData;
 import DataFiles.StaffData;
 
 public class Menus {
-
+	
+	//Main Menu
 	public void MainMenu(StaffData stf,AnimalData ad) {
 	System.out.println("::: Directory Selection Services :::");
 	System.out.println("Please select A Menu Item "
@@ -21,6 +22,8 @@ public class Menus {
 		default: 
 		}
 	}
+	
+	//Animal options menu
 	public void animalMenu(AnimalData ad,StaffData stf) {
 	
 	System.out.println("::: Animal Directory Services :::");
@@ -58,6 +61,7 @@ public class Menus {
 		}
 	}
 	
+	//Admin optionsmenu
 	public void adminMenu(AnimalData ad, StaffData stf) {
 		
 	System.out.println("::: Staff Directory Services :::");
@@ -88,6 +92,7 @@ public class Menus {
 		}
 	}
 	
+	//Reusable scanner next int method. 
 	public int scannerMethod() {
 		@SuppressWarnings("resource")
 		Scanner scanner = new Scanner(System.in);
