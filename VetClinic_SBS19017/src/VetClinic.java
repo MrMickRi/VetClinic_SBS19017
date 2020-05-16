@@ -6,6 +6,9 @@ public class VetClinic {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
+		System.out.println("::::::::::::::::::::::::::::::::::::::::");
+		System.out.println("::: Hey All You cool Cats & Kittens. :::");
+		System.out.println("::::::::::::::::::::::::::::::::::::::::");
 		//generates all data for Staff & Animals
 		StaffData stf = new StaffData();
 		stf.createStaffData();

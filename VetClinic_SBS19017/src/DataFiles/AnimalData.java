@@ -1,7 +1,10 @@
 package DataFiles;
 
 import java.util.ArrayList;
+import java.util.LinkedList;
+import java.util.Queue;
 import java.util.Random;
+import java.util.Scanner;
 
 import Objects.Animals;
 
@@ -62,6 +65,7 @@ public class AnimalData {
 	
 	public void animalCreator() {
 		animalList = new ArrayList<Animals>();
+		Queue<Animals> animalQue = new LinkedList<Animals>();
 		
 		int animalsList = 1000;
 		Random randName = new Random();
@@ -90,21 +94,43 @@ public class AnimalData {
 			a.setType(tempType);
 			a.setCondition(tempMedical);
 			animalList.add(a);
+			animalQue.add(a);
 			}
 	}
-			
+			//ShowAllAnimals
 			public void showAllAnimals() {
 				for (int i =0 ; i < animalList.size();i++) {
 					System.out.println(animalList.get(i));	
 					}
 			}
+			//ShowAnimalsByType
 			public void ShowAnimalsbyType() {
-				
+				@SuppressWarnings("resource")
+				Scanner scan = new Scanner(System.in);
+				String tempSearch = scan.nextLine();
+				for(int i = 0;i < animalList.size();i++) {
+					String tempType = animalList.get(i).getType();
+					boolean typeSearch = tempSearch.equals(tempType);
+					if(typeSearch != false){
+						System.out.println(animalList.get(i));
+					}
+				}
 			}
+			//Search By Name
 			public void searchByName() {
-				
+				@SuppressWarnings("resource")
+				Scanner scan = new Scanner(System.in);
+				String tempSearch = scan.nextLine();
+				for(int i = 0;i < animalList.size();i++) {
+					String tempName = animalList.get(i).getName();
+					boolean nameSearch = tempSearch.equals(tempName);
+					if(nameSearch != false){
+						System.out.println(animalList.get(i));
+					}
+				}
 			}
+			//List Animals and doctors
 			public void listAnimalsAndDoctors() {
-; 
+				//todo pull animals from que. with doctors. 
 			}
 }

@@ -157,49 +157,41 @@ public class StaffData {
 		}
 		//ShowStaffTitle allows the user to select a job title and this will print all staff members with said job title. 
 		public void ShowStaffTitle() {
+			
 			System.out.println("Please Select a Staff Title");
-			System.out.println("1.)Recepionist"
-					+ "2.)Cleaner"
-					+ "3.)Accountant"
-					+ "4.)Insurance Consultant"
-					+ "5.)General Vet"
-					+ "6.)Head Vetrinary Surgeon"
-					+ "7.)Vetrinary Surgeon"
-					+ "8.)Nurse"
-					+ "9.)anaesthesiologist");
+			System.out.println("\r\n1.)Recepionist"
+					+ "\r\n2.)Cleaner"
+					+ "\r\n3.)Accountant"
+					+ "\r\n4.)Insurance Consultant"
+					+ "\r\n5.)General Vet"
+					+ "\r\n6.)Head Vetrinary Surgeon"
+					+ "\r\n7.)Vetrinary Surgeon"
+					+ "\r\n8.)Nurse"
+					+ "\r\n9.)anaesthesiologist");
 			@SuppressWarnings("resource")
 			Scanner scanner = new Scanner(System.in);
 			int i = scanner.nextInt();
 			switch(i) {
 			case 1:
 				checkAdminList("Recepionist");
-				ShowStaffTitle();
 			break;
 			case 2:checkAdminList("Cleaner");
-			ShowStaffTitle();
 			break;
 			case 3:checkAdminList("Accountant");
-			ShowStaffTitle();
 			break;
 			case 4:checkAdminList("Insurance Consultant");
-			ShowStaffTitle();
 			break;
 			case 5:checkMedicalList("General Vet");
-			ShowStaffTitle();
 			break;
 			case 6:checkMedicalList("Head Vetrinary Surgeon");
-			ShowStaffTitle();
 			break;
-			case 7:checkMedicalList("Vetrinary Surgeon");
-			ShowStaffTitle();
+			case 7:checkMedicalList("Vetrinary Surgeon");	
 			break;
 			case 8:checkMedicalList("Nurse");
-			ShowStaffTitle();
 			break;
 			case 9:checkMedicalList("anaesthesiologist");
-			ShowStaffTitle();
 			break;
-			default:
+			default:System.out.println("That is not an option!");
 				}
 		}
 		//SearchByName method allows the user to input a name. this will execute a for loop which will search both
